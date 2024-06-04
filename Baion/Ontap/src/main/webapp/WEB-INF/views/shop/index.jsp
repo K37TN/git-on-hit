@@ -8,6 +8,8 @@
     <title>Document</title>
 </head>
 <body>
-
+<form action="/shop/list/add" method="post">
+Name : <input type="text" name="name">
+</form>
 </body>
 </html>
