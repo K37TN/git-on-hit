@@ -37,6 +37,7 @@ Name : <input type="text" name="name">
         <td>${x.createDate}</td>
         <td>${x.category.name}</td>
         <td><a href="/shop/delete?id=${x.id}">Delete</a></td>
+        <td><a href="/shop/showupdate?id=${x.id}}">Update</a></td>
     </tr>
     </c:forEach>
     </tbody>

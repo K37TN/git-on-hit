@@ -31,4 +31,14 @@ public class ProductController {
         productService.delete(id);
         return "redirect:/shop/list";
 }
+@GetMapping("/showupdate")
+    public String show(Model model,Integer id){
+        model.addAttribute("list",productService.detail(id));
+        return "/shop/update";
+}
+@PostMapping("update")
+    public String update(Product product){
+        productService.update(product);
+        return "redirect:/shop/list";
+}
 }
