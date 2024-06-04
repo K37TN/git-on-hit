@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,7 +10,7 @@
     <title>Document</title>
 </head>
 <body>
-<form action="/shop/list/add" method="post">
+<form action="/shop/add" method="post">
 Name : <input type="text" name="name">
     Price : <input type="text" name="price">
     CreateDate : <input type="date" name="createDate">
@@ -28,13 +29,14 @@ Name : <input type="text" name="name">
     </tr>
     </thead>
     <tbody>
-    <c:forEach var="${list}" items="x">
+    <c:forEach items="${list}" var="x">
     <tr>
         <td>${x.id}</td>
         <td>${x.name}</td>
         <td>${x.price}</td>
         <td>${x.createDate}</td>
         <td>${x.category.name}</td>
+        <td><a href="/shop/delete?id=${x.id}">Delete</a></td>
     </tr>
     </c:forEach>
     </tbody>
